@@ -837,6 +837,36 @@ class DnsHelper
             'add' => true,
             'sort' => false,
         ],
+        'dynu' => [
+            'name' => 'DynuDNS',
+            'icon' => 'cloud.png',
+            'note' => '在 Dynu 控制面板的 API Credentials 中获取 API Key。主域名地址支持修改和暂停，删除请在 Dynu 控制面板操作。',
+            'config' => [
+                'apikey' => [
+                    'name' => 'API Key',
+                    'type' => 'input',
+                    'placeholder' => '',
+                    'required' => true,
+                ],
+                'proxy' => [
+                    'name' => '使用代理服务器',
+                    'type' => 'radio',
+                    'options' => [
+                        '0' => '否',
+                        '1' => '是',
+                    ],
+                    'value' => '0',
+                ],
+            ],
+            'remark' => 0,
+            'status' => true,
+            'redirect' => false,
+            'log' => false,
+            'weight' => false,
+            'page' => false,
+            'add' => false,
+            'sort' => false,
+        ],
         'dynv6' => [
             'name' => 'dynv6',
             'icon' => 'dynv6.ico',
@@ -890,6 +920,7 @@ class DnsHelper
         'tencenteo' => ['DEF' => 'Default'],
         'dnsmgr' => ['DEF' => 'default'],
         'goedge' => ['DEF' => 'default'],
+        'dynu' => ['DEF' => 'default'],
     ];
 
     private static $record_type_support = [
